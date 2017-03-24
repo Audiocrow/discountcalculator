@@ -19,12 +19,12 @@ class CalculatorModel {
     //MARK: Dynamic Properties
     public var originalPrice: Float {
         get {
-            return Float(price) + Float(price)*tax
+            return Float(price) + Float(price)*(tax/100.0)
         }
     }
     public var discountPrice: Float {
         get {
-            let pretax: Float = Float(price - amtOff) * (1 - (discount + otherDiscount))
+            let pretax: Float = Float(price - amtOff) * (1.0 - (discount + otherDiscount))
             return pretax + pretax*tax
         }
     }
