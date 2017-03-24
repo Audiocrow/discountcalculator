@@ -25,7 +25,7 @@ class CalculatorModel {
     public var discountPrice: Float {
         get {
             let pretax: Float = Float(price - amtOff) * (1.0 - (discount + otherDiscount))
-            return pretax + pretax*tax
+            return pretax + pretax*(tax/100.0)
         }
     }
     //MARK: Methods
