@@ -51,12 +51,12 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
    func textFieldDidEndEditing(_ textField: UITextField)->Bool {
         let model = CalculatorModel.shared
         if textField.text != nil {
-            let text = textField.text!
-            if textField === priceField { model.price = Int(text) ?? 0 }
-            else if textField === amtOffField { model.amtOff = Int(text) ?? 0 }
-            else if textField === discountField { model.discount = Float(text) ?? 0 }
-            else if textField === otherField { model.otherDiscount = Float(text) ?? 0 }
-            else if textField === taxField { model.tax = Float(text) ?? 0 }
+            let text:NSString = textField.text! as NSString
+            if textField === priceField { model.price = text.floatValue }
+            else if textField === amtOffField { model.amtOff = text.floatValue }
+            else if textField === discountField { model.discount = text.floatValue }
+            else if textField === otherField { model.otherDiscount = text.floatValue }
+            else if textField === taxField { model.tax = text.floatValue }
         }
         originalLabel.text = "Original Price: $" + String(model.originalPrice)
         discountLabel.text = "Discount Price: $" + String(model.discountPrice)

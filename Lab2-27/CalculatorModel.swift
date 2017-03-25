@@ -11,8 +11,8 @@ import Foundation
 class CalculatorModel {
     static let shared = CalculatorModel()
     //MARK: Properties
-    var price: Int
-    var amtOff: Int
+    var price: Float
+    var amtOff: Float
     var discount: Float
     var otherDiscount: Float
     var tax: Float
@@ -29,7 +29,7 @@ class CalculatorModel {
         }
     }
     //MARK: Methods
-    private init(price:Int=0, amtOff:Int=0, discount:Float=0, discount2:Float=0, tax:Float=0) {
+    private init(price:Float=0, amtOff:Float=0, discount:Float=0, discount2:Float=0, tax:Float=0) {
         self.price = price
         self.amtOff = amtOff
         self.discount = discount
