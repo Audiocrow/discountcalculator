@@ -47,6 +47,8 @@ class ResultsView : UIView {
             text.draw(at: CGPoint(x: 5 + width-width/2, y: 18 + height/3), withAttributes: textAttributes)
             text = String(100 - (model.discountPrice/model.originalPrice)*100) + "%"
             text.draw(at: CGPoint(x: 5 + width-width/2, y: 34 + height/3), withAttributes: textAttributes)
+            text = "Swipe right to view calculator"
+            text.draw(at: CGPoint(x:5, y:height - 21), withAttributes: textAttributes)
         }
     }
 }

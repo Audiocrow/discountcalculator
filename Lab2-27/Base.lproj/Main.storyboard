@@ -132,6 +132,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Swipe left to view results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8Z-Zk-hSE">
+                                <rect key="frame" x="87" y="626" width="201" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="N0h-70-bGC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -150,8 +159,10 @@
                             <constraint firstItem="JKj-5v-jFF" firstAttribute="trailing" secondItem="SHj-3i-mLC" secondAttribute="trailingMargin" id="Kg6-BP-YJp"/>
                             <constraint firstItem="Agg-HL-Iju" firstAttribute="top" secondItem="pGN-MQ-TKi" secondAttribute="top" id="Omx-Ye-wYs"/>
                             <constraint firstItem="0jn-tL-DhO" firstAttribute="top" secondItem="VQ9-i5-kLu" secondAttribute="bottom" constant="10" id="U0x-0M-KTk"/>
+                            <constraint firstItem="Eph-y4-mKZ" firstAttribute="top" secondItem="m8Z-Zk-hSE" secondAttribute="bottom" constant="20" id="WF0-xk-0NG"/>
                             <constraint firstItem="458-Zl-PIt" firstAttribute="top" secondItem="reT-VR-mo0" secondAttribute="top" id="kbd-3p-heC"/>
                             <constraint firstItem="LXM-YG-oIx" firstAttribute="top" secondItem="0kB-1M-XiB" secondAttribute="top" id="lRn-e1-hCX"/>
+                            <constraint firstItem="m8Z-Zk-hSE" firstAttribute="centerX" secondItem="SHj-3i-mLC" secondAttribute="centerX" id="m3C-gk-olC"/>
                             <constraint firstItem="458-Zl-PIt" firstAttribute="trailing" secondItem="SHj-3i-mLC" secondAttribute="trailingMargin" id="p7v-2p-eWZ"/>
                             <constraint firstItem="7Qv-Tm-fMY" firstAttribute="top" secondItem="reT-VR-mo0" secondAttribute="bottom" constant="46" id="vrO-6A-OcD"/>
                         </constraints>
