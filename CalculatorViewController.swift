@@ -38,6 +38,11 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    //Allow a touch anywhere to close any open textfields
+    override func touchesBegan(_: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     //MARK: UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField)->Bool {
         textField.resignFirstResponder()
@@ -53,8 +58,8 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
             else if textField === otherField { model.otherDiscount = Float(text) ?? 0 }
             else if textField === taxField { model.tax = Float(text) ?? 0 }
         }
-        originalLabel.text = "Original Price: " + String(model.originalPrice)
-        discountLabel.text = "Discount Price: " + String(model.discountPrice)
+        originalLabel.text = "Original Price: $" + String(model.originalPrice)
+        discountLabel.text = "Discount Price: $" + String(model.discountPrice)
         return true
     }
     
