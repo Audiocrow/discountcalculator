@@ -40,6 +40,10 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField)->Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+   func textFieldDidEndEditing(_ textField: UITextField)->Bool {
         let model = CalculatorModel.shared
         if textField.text != nil {
             let text = textField.text!
@@ -49,8 +53,8 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
             else if textField === otherField { model.otherDiscount = Float(text) ?? 0 }
             else if textField === taxField { model.tax = Float(text) ?? 0 }
         }
-        originalLabel.text = "Original Price:" + String(model.originalPrice)
-        discountLabel.text = "Discount Price:" + String(model.discountPrice)
+        originalLabel.text = "Original Price: " + String(model.originalPrice)
+        discountLabel.text = "Discount Price: " + String(model.discountPrice)
         return true
     }
     
